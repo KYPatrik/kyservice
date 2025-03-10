@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KService</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="icon" href="logoico.ico">
+</head>
+<body>
+
+
+
+    <button id="sidebarCollapse">&#9776;</button>
+
+
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <img src="fulllogo2.png" alt="logo" id="full-logo">
+            <button id="sidebarCollapseClose" class="close-btn">Bezárás</button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="szamitogep-epites.html">Mivel foglalkozom?</a></li>
+            <li><a href="problemamegoldas.html">Árazás és Galéria</a></li>
+            <li><a href="tanacsadas.html">Tanácsadás</a></li>
+        </ul>
+    </nav>
+ 
+    <div id="content">
+        <div class="container">
+            
+            <header>
+                
+                <div class="logocontainer">
+                    <a href="index.html"><img src="logo-full-color.png" alt="Logo" id="logo" class="image top"></a>
+                
+
+                </div>
+                <h1>Számítógép szervíz</h1>
+                <p>Perbál</p>
+                <p > <a href="tel:+3630452633" id="servicelink">+36304526033<a></p>
+                <p><a href="#contact-section" id="servicelink">kservice.contact@gmail.com</a></p>
+            </header>
+
+            <section class="services">
+                <div class="service" id="szoveges-service">
+                    <a href="szamitogep-epites.html"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#3a86ff">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                    </svg></a>
+                    <h3>Számítógép építés</h3>
+                    <p>Egyedi igényekre szabott számítógépek összeállítása</p>
+                </div>
+                    <div class="service">
+                        <img src="home-ryzen.JPG" alt="Ryzen" class="home-ryzen">
+                    </div>
+                    <div class="service">
+                        
+                        <img src="macbook.jpg" alt="MacBook" class="macbook">
+
+                    </div>
+                <div class="service" id="szoveges-service">
+                    
+                    <a href="problemamegoldas.html"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#3a86ff">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.204-.107-.397.165-.71.505-.78.929l-.15.894c-.09.542-.56.94-1.109.94h-1.094c-.55 0-1.02-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg></a>
+                    <h3>Problémamegoldás</h3>
+                    <p>Megoldások informatikai kihívásokra. <br> Ingyenes hibafeltárás.</p>
+                </div>
+                <div class="service" id="szoveges-service">
+                    <a href="tanacsadas.html"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#3a86ff">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+                    </svg></a>
+                    <h3>Tanácsadás</h3>
+                    <p>Szakértői tanácsadás informatikai kérdésekben</p>
+                </div>
+                <div class="service">
+                    <img src="whitepc.jpg" alt="WhiteRyzen" class="macbook">
+                    
+                </div>
+            </section>
+            <section class="contact-form" id="contact-section">
+                <h2>Kapcsolatfelvétel</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Név:</label>
+                        <input type="text" id="name" name="name" placeholder="Adja meg a nevét!" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email cím:</label>
+                        <input type="email" id="email" name="email" placeholder="Adja meg az email címét!" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefonszám:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Adja meg a telefonszámát!">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Üzenet:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Írja meg üzenetét!" required></textarea>
+                    </div>
+                    <button type="submit">Küldés</button>
+                    <p>Várj egy kicsit miután megnyomtad a gombot!</p>
+                    <p>Amennyiben nem kaptál az oldaltól visszaigazolást, hogy elküldte az üzenetet írj manuálisan az email címre! </p>
+                </form>
+            </section>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer class="footer">
+    <p><a href="tel:+36304526033" id="servicelink">+36304526033</a></p>
+            <p>H - SZ: 12:00 - 17:00</p>
+            <p>CS: 8:00 - 17:00</p>
+            <p>P: 12:00 - 17:00</p>
+            <p>SZ - V: 10:00 - 13:00</p>
+            <p>A valós elérhetőségi órák eltérhetnek!</p>
+            <p style="text-align: right; margin-right: 80px;">Krizsák Patrik 2025</p>
+</footer>
+</html>

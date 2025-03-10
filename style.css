@@ -1,0 +1,595 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  /* background-image: url(/src/background.jpg); */
+
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.footer {
+    color: #a0a0a0; /* Halvány szürke szövegszín */
+    text-align: center; /* Középre igazított szöveg */
+    padding: 10px 0; /* Függőleges és vízszintes belső margó */
+    font-size: 14px; /* Kis méretű szöveg */
+}
+
+/*     3d object behind
+.logocontainer {
+  position: relative;
+  display: inline-block;
+  width: 150px; 
+  height: 150px;
+}
+*/
+
+#servicelink{
+color: #a0a0a0;
+text-decoration: none;
+}
+#servicelink:hover{
+  color:#8a2be2;
+}
+
+.image {
+  position: absolute;
+  width: 150px;
+  height: auto;
+}
+
+
+#logo {
+  position: relative;
+}
+
+
+
+#logo3d {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 512px;
+  height: 512px;
+  transform: translate(-50%, -50%) scale(0.4);
+  z-index: 1; 
+}
+  
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #8a2be2, #ff69b4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #a0a0a0;
+}
+
+.close-btn {
+  margin-left: 60px;
+}
+
+#logo {
+  width: 200px;
+}
+#full-logo {
+  width: 200px;
+  height: 60px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.service {
+  flex-basis: calc(33.333% - 20px);
+  width: 250px;
+  height: 195px;
+  text-align: center;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #3a86ff;
+}
+
+.service p {
+  color: #a0a0a0;
+  font-size: 16px;
+}
+
+.contact-form {
+  background-color: #111;
+  border-radius: 18px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+  transform: translateY(-10px);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #3a86ff;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  resize: none;
+}
+
+#ContactButton {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  background-color: #222;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#ContactButton:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .service {
+    flex-basis: 100%;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+#sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  background: #000;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#sidebar.active {
+  left: 0;
+}
+
+#sidebarCollapse,
+#sidebarCollapseClose {
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background: #000;
+}
+
+.sidebar-header h2 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  background: linear-gradient(45deg, #8a2be2, #ff69b4);
+  -webkit-background-clip: text; /* WebKit böngészők (pl. Safari) számára */
+  background-clip: text; /* Modern böngészők számára */
+  -webkit-text-fill-color: transparent; /* WebKit böngészők számára */
+  color: transparent; /* Biztosítja, hogy a szöveg átlátszó legyen */
+}
+
+.sidebar-menu {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar-menu li a {
+  padding: 15px 20px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar-menu li a:hover {
+  background: #222;
+}
+
+#content {
+  transition: all 0.3s;
+}
+
+#sidebarCollapse {
+  width: 10px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  color: #fff;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+/*
+#sidebarCollapse {
+    background-color: #000;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    text-align: left;
+    z-index: 1002;
+    border-bottom: 1px solid #222;
+}
+
+*/
+
+button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.main-content {
+  background-color: #111;
+  border-radius: 18px;
+  padding: 40px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+}
+
+.main-content:hover {
+  transform: translateY(-10px);
+}
+
+.main-content h2 {
+  color: #3a86ff;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.experience-section {
+  margin-bottom: 30px;
+}
+
+.services-list {
+  margin: 30px 0;
+}
+
+.services-list h3 {
+  color: #3a86ff;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.services-list ul {
+  list-style: inherit;
+}
+
+.services-list li {
+  color: #a0a0a0;
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.cta-text {
+  color: #fff;
+  font-weight: 500;
+  margin-top: 30px;
+  font-size: 18px;
+  background: linear-gradient(45deg, #8a2be2, #ff69b4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  max-width: 900px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 14px;
+}
+
+#logo {
+  width: 160px;
+}
+
+#full-logo {
+  width: 160px;
+  height: 48px;
+}
+
+.service {
+  flex-basis: calc(33.333% - 20px);
+  min-width: 290px;
+  max-width: 290px;
+  padding: 15px;
+}
+
+.service svg {
+  width: 60px;
+  height: 60px;
+}
+
+.service h3 {
+  font-size: 16px;
+}
+
+.service p {
+  font-size: 13px;
+}
+
+.contact-form {
+  max-width: 400px;
+  padding: 25px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 13px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 13px;
+}
+
+.main-content {
+  padding: 30px;
+}
+
+.main-content h2 {
+  font-size: 22px;
+}
+
+.services-list h3 {
+  font-size: 18px;
+}
+
+.services-list li {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.cta-text {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .contact-form {
+    padding: 15px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+}
+
+img.home-ryzen {
+  width: 100%; /* A kép szélessége illeszkedik a szülő elem szélességéhez */
+  max-width: 300px; /* Maximális szélesség a képekhez */
+  height: auto; /* Arányos magasság biztosítása */
+  display: block; /* A kép blokkelemként jelenjen meg */
+  margin: 0 auto; /* Középre igazítás */
+  border-radius: 10px; /* Lekerekített sarkok */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Árnyék a kép alatt */
+  transition: transform 0.3s ease; /* Animált nagyítás hover esetén */
+  align-items: center;
+}
+
+.macbook {
+  width: 100%; /* A kép szélessége illeszkedik a szülő elem szélességéhez */
+  max-width: 300px; /* Maximális szélesség a képekhez */
+  height: auto; /* Arányos magasság biztosítása */
+  display: block; /* A kép blokkelemként jelenjen meg */
+  margin: 0 auto; /* Középre igazítás */
+  border-radius: 10px; /* Lekerekített sarkok */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Árnyék a kép alatt */
+  transition: transform 0.3s ease; /* Animált nagyítás hover esetén */
+}
+
+.home-ryzen:hover,
+.macbook:hover,
+.white {
+  transform: scale(1.05); /* Enyhe nagyítás hover eseménynél */
+}
+.home-ryzen,
+.macbook {
+  max-width: 100%; /* Biztosítsuk, hogy ne legyenek túl nagyok */
+  height: auto; /* Arányok megtartása */
+  display: block; /* Képek blokk elemként viselkedjenek */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%; /* Maximális szélesség mobilra */
+  max-height: 80vh; /* Maximális magasság a képernyőhöz igazítva */
+  object-fit: contain; /* A kép arányait megtartva kitölti a rendelkezésre álló teret */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.2s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: #111;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #8a2be2;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Mobilra optimalizálás */
+@media (max-width: 768px) {
+  .modal-content {
+      max-width: 95%; /* Mobilra nagyobb szélesség */
+      max-height: 70vh; /* Mobilra nagyobb magasság */
+  }
+  
+  .prev, .next {
+      font-size: 16px; /* Mobilra kisebb nyilak */
+  }
+  
+  .close {
+      font-size: 30px; /* Mobilra kisebb bezárás gomb */
+  }
+}
+
